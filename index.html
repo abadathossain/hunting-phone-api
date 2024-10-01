@@ -12,10 +12,16 @@
 <body>
     <header>
         <h1 class="bg-slate-400 text-4xl text-center">Heading</h1>
-        <button onclick="loadPhones()">Load</button>
+        <!-- <button onclick="loadPhones()">Load</button> -->
 
     </header>
-    <main>
+    <main class="px-5">
+        <section>
+            <div>
+                <input id="search-field" type="text" placeholder="Search here...." class="input input-bordered w-full max-w-xs" />
+                <button class="btn btn-primary" onclick="handleSearch()">Search</button>
+            </div>
+        </section>
         <section>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 
