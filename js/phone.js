@@ -43,12 +43,23 @@ const displayPhones = (phones) => {
         phoneContainer.appendChild(phoneDiv)
 
     })
+    loadingSpinner(false)
 }
 const handleSearch = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     // console.log(searchText)
+    loadingSpinner(true)
     loadPhones(searchText)
+}
+
+const loadingSpinner=(isloading)=>{
+    const loadingSpinner=document.getElementById('loading-spinner')
+   if(isloading){
+    loadingSpinner.classList.remove('hidden')
+   }else{
+    loadingSpinner.classList.add('hidden')
+   }
 }
 // loadPhones()
 
