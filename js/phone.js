@@ -1,4 +1,4 @@
-const loadPhones = async () => {
+const loadPhones = async (searchText) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`)
     const data = await res.json()
     const phones = data.data
@@ -54,10 +54,9 @@ const handleSearch = () => {
 }
 
 const showDetails=async(id)=>{
-    // console.log('click',id)
+    console.log('click',id)
     const res=await fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
     const data=await res.json()
-    console.log(data)
 }
 
 const loadingSpinner = (isloading) => {
@@ -68,7 +67,7 @@ const loadingSpinner = (isloading) => {
         loadingSpinner.classList.add('hidden')
     }
 }
-// loadPhones(searchText)
+// loadPhones()
 
 
 
